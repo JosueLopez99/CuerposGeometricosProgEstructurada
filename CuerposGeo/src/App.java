@@ -372,7 +372,7 @@ System.out.println("Ingrese el radio");
     //====================================================
     
 
-    Volumen = (1/3)*altura*(AreaBaseMayor + AreaBaseMenor )+(AreaBaseMayor+AreaBaseMenor);
+    Volumen = (1/3)*altura*(AreaBaseMayor + AreaBaseMenor )*Math.sqrt(AreaBaseMayor*AreaBaseMenor);
 
     System.out.println("El volumen es " +  Volumen);
     break;
