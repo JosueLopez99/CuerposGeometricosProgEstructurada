@@ -8,6 +8,9 @@ public class App {
         double ApotemaP, generatriz, RadioEsfera, longitud,profundidad,numgrados;
         char A ;
 
+
+        for(int z = 1; z >= 3; z++) {
+
         System.out.println("Seleccione el cuerpo Geometrico a calcular");
         System.out.println("-----------------------------------------------");
         System.out.println("a.Prisma");
@@ -272,12 +275,12 @@ System.out.println("Ingrese el radio");
          System.out.println("Ingrese la altura");
     altura = lector.nextDouble();
 
-    area = 2*(altura*altura)*1.73;
+    area = 2*(altura*altura)*Math.sqrt(3);
     System.out.println("El area es " + area);
     
     //======================================
 
-    Volumen = (1.41/3)*(altura*altura*altura);
+    Volumen = Math.sqrt(2)/3*(altura*altura*altura);
     System.out.println("El volumen es " + Volumen);
     break;
 
@@ -285,11 +288,11 @@ System.out.println("Ingrese el radio");
     System.out.println("Ingrese la altura");
     altura = lector.nextDouble();
 
-    area = 3*(altura*altura)*8.84;
+    area = 3*(altura*altura)*Math.sqrt(35*Math.sqrt(5));
     System.out.println("El area es " + area);
 
     //======================
-    Volumen = (1/4)*49*1*altura*altura*altura;
+    Volumen = (1/4*15+7*Math.sqrt(5))*(altura*altura*altura);
     System.out.println("El volumen es " + Volumen);
     break;
 
@@ -300,11 +303,11 @@ System.out.println("Ingrese el radio");
     area = (altura*altura)*1.73;
     System.out.println("El area es " + area);
 
-    area = 5*(altura*altura)*1.73;
+    area = 5*(altura*altura)*Math.sqrt(3);
     System.out.println("El area es " + area);
 
     //===================================
-    Volumen = (5/12)*5.23*altura*altura*altura;
+    Volumen = 5/12*3+Math.sqrt(5)*altura*altura*altura;
     System.out.println("El Volumen es " + Volumen);
     break;
 
@@ -372,13 +375,17 @@ System.out.println("Ingrese el radio");
     //====================================================
     
 
-    Volumen = (1/3)*altura*(AreaBaseMayor + AreaBaseMenor )*Math.sqrt(AreaBaseMayor*AreaBaseMenor);
+    Volumen = (1/3)*altura*(AreaBaseMayor + AreaBaseMenor )+ Math.sqrt(AreaBaseMayor)*Math.sqrt(AreaBaseMenor);
 
     System.out.println("El volumen es " +  Volumen);
     break;
 
     default:
-    System.out.println("Valor invalido");
+    System.out.println("Usted ha sido vetado del programa");
+    while(z == 3){
+    
+    }
     }  
   }
+ }
 }
